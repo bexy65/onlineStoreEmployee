@@ -15,4 +15,9 @@ export class ApiService {
   getUser() : Observable<any> {
     return this.http.get(this.userApi);
   }
+
+  addUser(data: any):Observable<any> {
+    return this.http.post(this.userApi, data);
+  }
+
 }

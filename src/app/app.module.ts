@@ -16,11 +16,13 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import {MatTableModule} from '@angular/material/table';
 import { MatSort, MatSortModule } from '@angular/material/sort';
+import { AddemployeeComponent } from './addemployee/addemployee.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    AddemployeeComponent
   ],
   imports: [
     BrowserModule,
