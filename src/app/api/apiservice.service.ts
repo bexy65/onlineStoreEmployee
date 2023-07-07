@@ -12,10 +12,6 @@ export class ApiService {
 
   userApi: string = environment.userApi;
 
-  // addUser(data: any):Observable<any> {
-  //   return this.http.post(this.userApi, data);
-  // }
-
   getUser() : Observable<any> {
     return this.http.get(this.userApi);
   }

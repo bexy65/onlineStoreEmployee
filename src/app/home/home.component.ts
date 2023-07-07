@@ -40,13 +40,4 @@ export class HomeComponent {
       }
     })
   }
-
-  // deleteUser(id:number) {
-  //   this.userService.deleteUser(id).subscribe({
-  //     next: (res:any) => {
-  //       this.getUserList();
-  //     },
-  //     error: console.log,
-  //   })
-  // } 
 }
