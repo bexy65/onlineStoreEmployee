@@ -1,25 +1,25 @@
 <div class="container">
    <form class="form-container" [formGroup]="userForm" (ngSubmit)="submitForm()">
-      <mat-form-field appearance="outline">
+      <mat-form-field appearance="outline" required>
          <mat-label>First Name</mat-label>
-         <input matInput type="text" formControlName="firstName">
+         <input matInput type="text" formControlName="firstName" required>
          <div class="string-check" *ngIf="userForm.controls['firstName'].errors?.['pattern']">
-            Only string values are allowed.
+            Only string values are allowed remove whitespaces and numbers.
          </div>
       </mat-form-field>
       
 
-      <mat-form-field appearance="outline">
+      <mat-form-field appearance="outline" >
          <mat-label>Last Name</mat-label>
-         <input matInput type="text" formControlName="lastName">
+         <input matInput type="text" formControlName="lastName" required>
          <div class="string-check" *ngIf="userForm.controls['lastName'].errors?.['pattern']">
             Only string values are allowed.
          </div>
       </mat-form-field>
 
-      <mat-form-field appearance="outline">
+      <mat-form-field appearance="outline" required>
          <mat-label>Profession</mat-label>
-         <input matInput placeholder="Proffession" type="text" formControlName="profession">
+         <input matInput placeholder="Proffession" type="text" formControlName="profession" required>
          <div class="string-check" *ngIf="userForm.controls['profession'].errors?.['pattern']">
             Only string values are allowed.
          </div>
@@ -27,23 +27,24 @@
 
       <mat-form-field>
          <mat-label>Gender</mat-label>
-         <mat-select formControlName="gender">
-            <mat-option value="male">Male</mat-option>
-            <mat-option value="female">Female</mat-option>
+         <mat-select formControlName="gender" required>
+            <mat-option value="Male">Male</mat-option>
+            <mat-option value="Female">Female</mat-option>
          </mat-select>
       </mat-form-field>
 
       <mat-form-field>
          <mat-label>Select Age</mat-label>
-         <mat-select placeholder="Age" formControlName="age">
+         <mat-select placeholder="Age" formControlName="age" required>
             <mat-option *ngFor="let age of ages" [value]="age">
                {{ age }}
             </mat-option>
          </mat-select>
       </mat-form-field>
       <div class="button-container">
-         <button mat-raised-button color="primary" type="submit" [disabled]="!userForm.valid">Add</button>
-         <button mat-raised-button color="warn" type="button"><a style="text-decoration: none; color:white;"  routerLink="/">Cancel</a></button>
+         <button *ngIf="!isUpdate" mat-raised-button color="primary" type="submit" class="update-btn" [disabled]="!userForm.valid">Add</button>
+         <button *ngIf="isUpdate" (click)="update()" color="warn" type="button" class="update-btn" [disabled]="!userForm.valid">Upate</button>
+         <button mat-raised-button color="warn" type="button" style="text-decoration: none; color:white;"  routerLink="/">Cancel</button>
       </div>
    </form>
 </div>

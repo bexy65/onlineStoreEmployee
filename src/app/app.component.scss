@@ -1,4 +1,60 @@
-.example-spacer {
-   flex: 1 1 auto;
+mat-toolbar {
+   min-height: 100px;
+   .example-spacer {
+      flex: 1 1 auto;
+   }
+   span{
+      font-size: 32px;
+   }
+   button { 
+      background-color: rgb(250, 61, 61);
+      margin: 0 10px 0;
+      color: white;
+      min-width: 100px; 
+      height: 50px;
+      font-size: large;
+      padding: 5px;
+   }
 }
 
+
+.footer {
+   position: absolute;
+   bottom: 0;
+}
+
+
+
+@media only screen and (min-width: 425px) {
+   mat-toolbar { 
+      min-height: 70px;
+      button { 
+         background-color: rgb(250, 61, 61);
+         margin: 0 10px 0;
+         color: white;
+         min-width: 60px; 
+         height: 40px;
+         padding: 5px;
+         font-size: 16px;
+      }
+   }
+
+   .footer {
+      position: absolute;
+      bottom: 0;
+      max-height: 10px;
+      width: 100%;
+   }
+}
+
+@media only screen and (min-width: 768px) {
+   body {
+     background-color: lightblue;
+   }
+}
+
+@media only screen and (min-width: 1024px) {
+   body {
+     background-color: lightblue;
+   }
+}

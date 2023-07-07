@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { ApiService } from '../api/apiservice.service';
+import { Router } from '@angular/router';
 
 
 
@@ -10,7 +11,7 @@ import { ApiService } from '../api/apiservice.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  constructor(private api: ApiService) {}
+  constructor(private api: ApiService, private router: Router) {}
 
   displayedColumns: string[] = [
     'id',
@@ -38,6 +39,18 @@ export class HomeComponent {
       error: (err:any) => {
         console.log(err);
       }
+    })
+  }
+  updateUser(id:number) {
+    this.router.navigate(['update', id]);
+  }
+
+  deleteUser(id:number) {
+    this.api.deleteUser(id).subscribe({
+      next: (res) => {
+        this.getUserList();
+      },
+      error: console.log,
     })
   }
 }
