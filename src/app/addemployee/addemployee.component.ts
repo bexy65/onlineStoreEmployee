@@ -5,7 +5,6 @@ import { Router } from '@angular/router';
 import { ApiService } from '../api/apiservice.service';
 import { dataModal } from '../home/dataModal';
 import { ActivatedRoute } from '@angular/router';
-import { MatSnackBar } from '@angular/material/snack-bar';
 import { SnackBarService } from '../services/snack-bar.service';
 
 @Component({
