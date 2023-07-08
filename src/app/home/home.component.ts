@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { ApiService } from '../api/apiservice.service';
 import { Router } from '@angular/router';
+import { SnackBarService } from '../services/snack-bar.service';
 
 
 
@@ -11,8 +12,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  constructor(private api: ApiService, private router: Router) {}
-
+  constructor(private api: ApiService, private router: Router, private snackBar: SnackBarService) {}
   displayedColumns: string[] = [
     'id',
     'firstName',
@@ -23,8 +23,11 @@ export class HomeComponent {
     'action'
   ];
   dataSource !: MatTableDataSource<any>;
-  
-  
+
+  massageDeleteSuccessfully: string = 'User DELETED successfully!';
+  massageFromServerLoad: string = 'Error on loading data from server, please try again later!';
+  massageFromServerDelete: string = 'Error on deleting data, please try again later!';
+  action: string = 'Close';
   
   ngOnInit(): void {
       this.getUserList();
@@ -38,6 +41,7 @@ export class HomeComponent {
       },
       error: (err:any) => {
         console.log(err);
+        this.snackBar.showSnackbar(this.massageFromServerLoad, this.action);
       }
     })
   }
@@ -49,8 +53,12 @@ export class HomeComponent {
     this.api.deleteUser(id).subscribe({
       next: (res) => {
         this.getUserList();
+        this.snackBar.showSnackbar(this.massageDeleteSuccessfully, this.action);
       },
-      error: console.log,
+      error:(err:any) => {
+        console.log(err);
+        this.snackBar.showSnackbar(this.massageFromServerDelete, this.action);
+      }
     })
   }
 }
