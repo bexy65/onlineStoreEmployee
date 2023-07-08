@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { ApiService } from '../api/apiservice.service';
 import { Router } from '@angular/router';
@@ -11,10 +11,12 @@ import { MatDialog } from '@angular/material/dialog';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent {
+export class HomeComponent   {
   constructor(private api: ApiService, private router: Router, private snackBar: SnackBarService, private dialog: MatDialog) {}
+
+
   displayedColumns: string[] = [
     'id',
     'firstName',

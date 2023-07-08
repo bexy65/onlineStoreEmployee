@@ -1,200 +1,191 @@
 .table-container {
-   padding: 0;
-   display: flex;
+  padding: 0;
 }
 
 @media screen and (min-width: 425px) {
-   body {
-      font-size: 10px;
-   }
-   .table-container {
+  body {
+    font-size: 10px;
+  }
+  .table-container {
+    padding: 0;
+    display: flex;
+
+    table {
+      box-shadow: none;
+      margin: 0;
       padding: 0;
-      display: flex;
+      table-layout: fixed;
+      width: 100%;
 
-      table{
-         box-shadow: none;
-         margin: 0;
-         padding: 0;
-         table-layout:fixed;
-         width: 100%;
-
-         .mat-column-id {
-            word-wrap: break-word !important;
-            white-space: unset !important;
-            flex: 0 0 28% !important;
-            width: 5% !important;
-            overflow-wrap: break-word;
-            word-wrap: break-word;
-            word-break: break-word;
-            -ms-hyphens: auto;
-            -moz-hyphens: auto;
-            -webkit-hyphens: auto;
-            hyphens: auto;
-         }
-         .mat-column-firstName {
-            word-wrap: break-word !important;
-            white-space: unset !important;
-            flex: 0 0 28% !important;
-            width: 15% !important;
-            overflow-wrap: break-word;
-            word-wrap: break-word;
-            word-break: break-word;
-            -ms-hyphens: auto;
-            -moz-hyphens: auto;
-            -webkit-hyphens: auto;
-            hyphens: auto;
-         }
-         .mat-column-lastName {
-            word-wrap: break-word !important;
-            white-space: unset !important;
-            flex: 0 0 28% !important;
-            width: 15% !important;
-            overflow-wrap: break-word;
-            word-wrap: break-word;
-            word-break: break-word;
-            -ms-hyphens: auto;
-            -moz-hyphens: auto;
-            -webkit-hyphens: auto;
-            hyphens: auto;
-         }
-         .mat-column-age {
-            word-wrap: break-word !important;
-            white-space: unset !important;
-            flex: 0 0 28% !important;
-            width: 10% !important;
-            overflow-wrap: break-word;
-            word-wrap: break-word;
-            word-break: break-word;
-            -ms-hyphens: auto;
-            -moz-hyphens: auto;
-            -webkit-hyphens: auto;
-            hyphens: auto;
-         }
-         .mat-column-gender {
-            word-wrap: break-word !important;
-            white-space: unset !important;
-            flex: 0 0 28% !important;
-            width: 11% !important;
-            overflow-wrap: break-word;
-            word-wrap: break-word;
-            word-break: break-word;
-            -ms-hyphens: auto;
-            -moz-hyphens: auto;
-            -webkit-hyphens: auto;
-            hyphens: auto;
-         }
-         .mat-column-profession {
-            word-wrap: break-word !important;
-            white-space: unset !important;
-            flex: 0 0 28% !important;
-            width: 16% !important;
-            overflow-wrap: break-word;
-            word-wrap: break-word;
-            word-break: break-word;
-            -ms-hyphens: auto;
-            -moz-hyphens: auto;
-            -webkit-hyphens: auto;
-            hyphens: auto;
-         }
-         
-         .mat-column-action {
-            word-wrap: break-word !important;
-            white-space: unset !important;
-            flex: 0 0 28% !important;
-            width: 15% !important;
-            overflow-wrap: break-word;
-            word-wrap: break-word;
-            word-break: break-word;
-            -ms-hyphens: auto;
-            -moz-hyphens: auto;
-            -webkit-hyphens: auto;
-            hyphens: auto;
-         }
-         td {
-            font-size: 11px;
-            padding: 0 3px 0px;
-            text-align: center;
-         }
-         tr {
-            font-size: 11px;
-            padding: 0 5px;
-            text-align: center;
-         }
-         th {
-            font-size: 11px;
-            padding: 0 5px;
-            text-align: center;
-         }
+      .mat-column-id {
+        word-wrap: break-word !important;
+        white-space: unset !important;
+        flex: 0 0 28% !important;
+        width: 5% !important;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
       }
-   }
-} 
+      .mat-column-firstName {
+        word-wrap: break-word !important;
+        white-space: unset !important;
+        flex: 0 0 28% !important;
+        width: 15% !important;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+      .mat-column-lastName {
+        word-wrap: break-word !important;
+        white-space: unset !important;
+        flex: 0 0 28% !important;
+        width: 15% !important;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+      .mat-column-age {
+        word-wrap: break-word !important;
+        white-space: unset !important;
+        flex: 0 0 28% !important;
+        width: 10% !important;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+      .mat-column-gender {
+        word-wrap: break-word !important;
+        white-space: unset !important;
+        flex: 0 0 28% !important;
+        width: 11% !important;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+      .mat-column-profession {
+        word-wrap: break-word !important;
+        white-space: unset !important;
+        flex: 0 0 28% !important;
+        width: 16% !important;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+
+      .mat-column-action {
+        word-wrap: break-word !important;
+        white-space: unset !important;
+        flex: 0 0 28% !important;
+        width: 15% !important;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+      td {
+        font-size: 11px;
+        padding: 0 3px 0px;
+        text-align: center;
+      }
+      tr {
+        font-size: 11px;
+        padding: 0 5px;
+        text-align: center;
+      }
+      th {
+        font-size: 11px;
+        padding: 0 5px;
+        text-align: center;
+      }
+    }
+  }
+}
 
 @media screen and (min-width: 768px) {
-  
-   .table-container {
-      padding: 0;
-      display: flex;
-   
-      table{
-         .mat-column-id {
-            font-size: 22px;
-         }
-         .mat-column-firstName {
-            font-size: 22px;
-          
-         }
-         .mat-column-lastName {
-            font-size: 22px;
-         }
-         .mat-column-age {
-            font-size: 22px;
-         }
-         .mat-column-gender {
-            font-size: 22px;
-         }
-         
-         .mat-column-profession {
-            font-size: 22px;
-         }
-         
-         .mat-column-action {
-            font-size: 22px;
-         }
-         th {
-            font-size: 20x;
-         }
-         td {
-            font-size: 20px;
-         }
-         tr {
-            font-size: 20px;
-         }
+  .table-container {
+    padding: 0;
 
+    table {
+      .mat-column-id {
+        font-size: 22px;
       }
-   }
+      .mat-column-firstName {
+        font-size: 22px;
+      }
+      .mat-column-lastName {
+        font-size: 22px;
+      }
+      .mat-column-age {
+        font-size: 22px;
+      }
+      .mat-column-gender {
+        font-size: 22px;
+      }
+
+      .mat-column-profession {
+        font-size: 22px;
+      }
+
+      .mat-column-action {
+        font-size: 22px;
+      }
+      th {
+        font-size: 20x;
+      }
+      td {
+        font-size: 20px;
+      }
+      tr {
+        font-size: 20px;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 1024px) {
-  
-   .table-container {
-      max-width: 1450px;
-      min-width: 780px;
+  .table-container {
+    max-width: 1450px;
+    min-width: 780px;
 
-      
-      table{
-         td {
-            font-size: 20px;
-            button {
-               mat-icon {
-                  font-size: 24px;
-               }
-            }
-         }
-         tr {
-            font-size: 20px;
-         }
+    table {
+      td {
+        font-size: 20px;
+        button {
+          mat-icon {
+            font-size: 24px;
+          }
+        }
       }
-   }
+      tr {
+        font-size: 20px;
+      }
+    }
+  }
 }
-
-   

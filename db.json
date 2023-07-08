@@ -3,16 +3,16 @@
     {
       "firstName": "Naim",
       "lastName": "Ertan",
-      "profession": "FrontEnd",
+      "profession": "Frontend Web Developer",
       "gender": "Male",
       "age": 22,
       "id": 5
     },
     {
-      "firstName": "asda",
-      "lastName": "asdasd",
-      "profession": "asdasd",
-      "gender": "Male",
+      "firstName": "Derya",
+      "lastName": "Naim",
+      "profession": "Laboratory Nurse",
+      "gender": "Female",
       "age": 23,
       "id": 6
     }
