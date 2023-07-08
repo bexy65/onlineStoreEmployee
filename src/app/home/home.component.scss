@@ -177,9 +177,10 @@
 @media screen and (min-width: 1024px) {
   
    .table-container {
-      padding: 0;
-      display: flex;
-   
+      max-width: 1450px;
+      min-width: 780px;
+
+      
       table{
          td {
             font-size: 20px;

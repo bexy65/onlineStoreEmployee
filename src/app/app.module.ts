@@ -17,12 +17,16 @@ import { HomeComponent } from './home/home.component';
 import {MatTableModule} from '@angular/material/table';
 import { MatSort, MatSortModule } from '@angular/material/sort';
 import { AddemployeeComponent } from './addemployee/addemployee.component';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    AddemployeeComponent
+    AddemployeeComponent,
+    FooterComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

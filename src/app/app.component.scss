@@ -1,65 +1,16 @@
-mat-toolbar {
-   min-height: 100px;
-   .example-spacer {
-      flex: 1 1 auto;
-   }
-   span{
-      font-size: 32px;
-   }
-   button { 
-      background-color: rgb(250, 61, 61);
-      margin: 0 10px 0;
-      color: white;
-      min-width: 100px; 
-      height: 50px;
-      font-size: large;
-      padding: 5px;
+
+div[class="app-body"] {
+   height: 100%;
+   margin: 0;
+   padding: 0;
+   .body-container { 
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100%;
    }
 }
 
-.footer {
-   position: absolute;
-   bottom: 0;
-}
-
-@media only screen and (min-width: 425px) {
-   mat-toolbar { 
-      min-height: 70px;
-      button { 
-         background-color: rgb(250, 61, 61);
-         margin: 0 10px 0;
-         color: white;
-         min-width: 60px; 
-         height: 40px;
-         padding: 5px;
-         font-size: 16px;
-      }
-   }
-
-   .footer {
-      position: absolute;
-      bottom: 0;
-      max-height: 10px;
-      width: 100%;
-   }
-}
-
-@media only screen and (min-width: 768px) {
-   body {
-     background-color: lightblue;
-     font-size: 16px;
-   }
-   mat-toolbar {
-      button {
-         min-height: 50px;
-         min-width: 120px;
-      }
-   }
-}
-
-@media only screen and (min-width: 1024px) {
-   body {
-     background-color: lightblue;
-     font-size: 24px;
-   }
-}
