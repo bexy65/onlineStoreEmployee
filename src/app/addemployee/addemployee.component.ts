@@ -15,10 +15,11 @@ import { SnackBarService } from '../services/snack-bar.service';
 export class AddemployeeComponent {
   selectedAge: number;
   ages: number[];
+  userId!: number; 
+  isUpdate: boolean = false;
+
   userForm: FormGroup;
   validateString = new FormControl('', Validators.pattern('^[a-zA-Z]+$'));
-  userId!: number;
-  isUpdate: boolean = false;
 
   massageUpdateSuccessfully: string = 'User UPDATED successfully!';
   massageAddSuccessfully: string = 'User ADDED successfully!';
@@ -36,9 +37,9 @@ export class AddemployeeComponent {
     this.userForm = this.formBuilder.group({
       firstName : new FormControl('', Validators.pattern('^[a-zA-Z]+$')),
       lastName: new FormControl('', Validators.pattern('^[a-zA-Z]+$')),
-      profession: new FormControl('', Validators.pattern('^[a-zA-Z]+$')),
+      profession: new FormControl('', Validators.pattern('^[a-zA-Z ]+$')),
       gender: new FormControl('', Validators.pattern('^[a-zA-Z]+$')),
-      age: ''
+      age: '',
     })
 
       this.activatedRoute.params.subscribe((val) => {
@@ -88,9 +89,6 @@ export class AddemployeeComponent {
       }
     })
   }
-
-
-
   
   valueFormChange(data: dataModal) {
     this.userForm.setValue({
@@ -100,8 +98,5 @@ export class AddemployeeComponent {
       gender: data.gender,
       age: data.age
     });
-    
   }
-
-   
 }

@@ -47,6 +47,7 @@ export class HomeComponent {
       }
     })
   }
+  
   updateUser(id:number) {
     this.router.navigate(['update', id]);
   }
