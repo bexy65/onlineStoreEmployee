@@ -19,6 +19,8 @@ import { MatSort, MatSortModule } from '@angular/material/sort';
 import { AddemployeeComponent } from './addemployee/addemployee.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
 
 @NgModule({
   declarations: [
@@ -44,6 +46,7 @@ import { HeaderComponent } from './header/header.component';
     MatSelectModule,
     MatTableModule,
     MatSortModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
