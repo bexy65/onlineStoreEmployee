@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-addemployee',
   templateUrl: './addemployee.component.html',
-  styleUrls: ['./addemployee.component.scss']
+  styleUrls: ['./addemployee.component.scss'],
 })
 export class AddemployeeComponent {
   selectedAge: number;
