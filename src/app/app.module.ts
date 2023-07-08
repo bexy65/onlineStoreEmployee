@@ -20,6 +20,7 @@ import { AddemployeeComponent } from './addemployee/addemployee.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { ConfirmationDialogComponent } from './confirmation-dialog/confirmation-dialog.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     HomeComponent,
     AddemployeeComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    ConfirmationDialogComponent
   ],
   imports: [
     BrowserModule,
