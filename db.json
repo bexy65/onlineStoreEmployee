@@ -1,14 +1,6 @@
 {
   "employees": [
     {
-      "firstName": "John",
-      "lastName": "Doe",
-      "profession": "Athlete",
-      "gender": "Male",
-      "age": 34,
-      "id": 4
-    },
-    {
       "firstName": "Naim",
       "lastName": "Ertan",
       "profession": "FrontEnd",

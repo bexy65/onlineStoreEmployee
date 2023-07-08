@@ -3,6 +3,8 @@ import { MatTableDataSource } from '@angular/material/table';
 import { ApiService } from '../api/apiservice.service';
 import { Router } from '@angular/router';
 import { SnackBarService } from '../services/snack-bar.service';
+import { ConfirmationDialogComponent } from '../confirmation-dialog/confirmation-dialog.component';
+import { MatDialog } from '@angular/material/dialog';
 
 
 
@@ -12,7 +14,7 @@ import { SnackBarService } from '../services/snack-bar.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  constructor(private api: ApiService, private router: Router, private snackBar: SnackBarService) {}
+  constructor(private api: ApiService, private router: Router, private snackBar: SnackBarService, private dialog: MatDialog) {}
   displayedColumns: string[] = [
     'id',
     'firstName',
@@ -60,5 +62,15 @@ export class HomeComponent {
         this.snackBar.showSnackbar(this.massageFromServerDelete, this.action);
       }
     })
+  }
+
+  openConfirmationDialog(id:number): void {
+    const dialogRef = this.dialog.open(ConfirmationDialogComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result === true) {
+        this.deleteUser(id);
+      } 
+    });
   }
 }
